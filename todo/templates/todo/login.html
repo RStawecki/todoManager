@@ -1,0 +1,7 @@
+{{error}}
+<form action="{% url 'loginUser' %}" method ="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Log in</button>
+    
+</form>
