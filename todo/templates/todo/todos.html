@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<h1>Current</h1>
+
+{% for todo in current  %}
+    <a href="{% url 'detail' todo.id %}">{{todo.title}}</a>
+    
+{% endfor %}
+
+<h1>Completed</h1>
+
+{% for todo in completed  %}
+   <a href="{% url 'detail' todo.id %}">{{todo.title}}</a> 
+{% endfor %}
+  
+    
+{% endblock content %}

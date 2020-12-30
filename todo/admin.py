@@ -5,4 +5,4 @@ from todo.models import Todo
 class createDate(admin.ModelAdmin):
     readonly_fields = ('createDate',)
 
-admin.site.register(Todo)
+admin.site.register(Todo, createDate)
